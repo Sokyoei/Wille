@@ -61,3 +61,25 @@ npm install eslint --save-dev
 # 初始化 eslint(需要 package.json)
 npm init @eslint/config
 ```
+
+## FAQ
+
+Windows 上 PowerShell 执行 ts-node 等出错
+
+```log
+ts-node : 无法加载文件 D:\nodejs\node_global\ts-node.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=135170 中的 about_Exec
+ution_Policies。
+所在位置 行:1 字符: 1
++ ts-node "d:\Andromeda\Sokyoei\Wille\ts\base.ts"
++ ~~~~~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+```
+
+```powershell
+get-ExecutionPolicy
+# Restricted
+
+# 管理员运行
+Set-ExecutionPolicy RemoteSigned
+```
