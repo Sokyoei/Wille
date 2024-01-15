@@ -18,5 +18,11 @@
     "bugs": {
         "url": "https://github.com/Sokyoei/Wille/issues"
     },
-    "homepage": "https://github.com/Sokyoei/Wille#readme"
+    "homepage": "https://github.com/Sokyoei/Wille#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.18.1",
+        "@typescript-eslint/parser": "^6.18.1",
+        "eslint": "^8.56.0",
+        "eslint-plugin-vue": "^9.20.1"
+    }
 }

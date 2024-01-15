@@ -50,3 +50,14 @@ yarn config set registry https://registry.npm.taobao.org
 npm install -g typescript
 npm install -g ts-node
 ```
+
+## 安装 eslint
+
+```shell
+npm install eslint -g
+# 项目安装并保存在 package.json 的 devDependencies 字段
+npm install eslint --save-dev
+
+# 初始化 eslint(需要 package.json)
+npm init @eslint/config
+```
