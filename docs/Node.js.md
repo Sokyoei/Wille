@@ -26,16 +26,6 @@ npm config set registry https://registry.npmmirror.com
 npm install -g cnpm --registry=https://registry.npmmirror.com
 ```
 
-## 安装 vue
-
-```shell
-npm install vue -g
-npm install webpack -g
-npm install webpack-cli -g
-npm install vue-cli -g
-npm install vue-router -g
-```
-
 ## 安装 yarn
 
 ```shell

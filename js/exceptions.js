@@ -9,18 +9,18 @@
 //      URIError
 
 class AhriError {
-    constructor(message) {
-        this.message = message;
-        this.name = "AhriError";
-    }
+  constructor(message) {
+    this.message = message;
+    this.name = "AhriError";
+  }
 }
 
 AhriError.prototype = new Error();
 
 try {
-    throw new AhriError("AhriError");
+  throw new AhriError("AhriError");
 } catch (error) {
-    console.log(error.message);
+  console.log(error.message);
 } finally {
-    console.log("finally");
+  console.log("finally");
 }

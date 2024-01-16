@@ -25,9 +25,9 @@ console.log(typeof [1, 2])
 console.log(typeof { 1: 2, 3: 4 })
 
 var person = {
-    name: "Ahri", age: 13, printInfo: function () {
-        console.log(this.name, this.age);
-    },
+  name: "Ahri", age: 13, printInfo: function () {
+    console.log(this.name, this.age);
+  },
 };
 
 

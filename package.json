@@ -1,28 +1,28 @@
 {
-    "name": "wille",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "directories": {
-        "doc": "docs"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Sokyoei/Wille.git"
-    },
-    "author": "Sokyoei",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Sokyoei/Wille/issues"
-    },
-    "homepage": "https://github.com/Sokyoei/Wille#readme",
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^6.18.1",
-        "@typescript-eslint/parser": "^6.18.1",
-        "eslint": "^8.56.0",
-        "eslint-plugin-vue": "^9.20.1"
-    }
+  "name": "wille",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sokyoei/Wille.git"
+  },
+  "author": "Sokyoei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sokyoei/Wille/issues"
+  },
+  "homepage": "https://github.com/Sokyoei/Wille#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.20.1"
+  }
 }
