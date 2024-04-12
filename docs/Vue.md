@@ -2,7 +2,7 @@
 
 [docs](https://cn.vuejs.org/guide/introduction.html)
 
-## install
+## 安装
 
 ```shell
 npm install vue -g
@@ -13,7 +13,7 @@ npm install @vue/cli -g
 npm install vue-router -g
 ```
 
-## create project
+## 使用脚手架创建项目
 
 ```shell
 vue create project_name

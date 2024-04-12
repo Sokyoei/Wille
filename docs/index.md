@@ -17,7 +17,7 @@ npm config set cache "D:\nodejs\node_cache"
 
 ## npm 更换国内淘宝源
 
-```powershell
+```shell
 # 查看 npm 默认源
 npm config get registry
 # https://registry.npmjs.org/
@@ -31,7 +31,8 @@ npm install -g cnpm --registry=https://registry.npmmirror.com
 ```shell
 npm install -g yarn
 # yarn config get registry
-yarn config set registry https://registry.npm.taobao.org
+# yarn config set registry https://registry.npm.taobao.org
+yarn config set registry https://registry.npmmirror.com
 ```
 
 ## 安装 TypeScript
