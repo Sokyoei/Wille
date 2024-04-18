@@ -5,40 +5,40 @@ repo_name: Sokyoei/Wille
 repo_url: https://github.com/Sokyoei/Wille
 
 theme:
-    name: material
-    language: zh
-    logo: images/Popstar Ahri-512x512.jpg
-    favicon: images/favicon_32x32.ico
-    features:
-        - header.autohide
-        - navigation.top
-        - navigation.footer
-        - search.suggest
-        - toc.integrate
-        - content.code.copy
-    palette:
-        primary: pink
-        accent: purple
-        # - media: "(prefers-color-scheme: light)"
-        #   scheme: sokyoei
-        #   toggle:
-        #     icon: material/brightness-7
-        #     name: dark mode
-        # - media: "(prefers-color-scheme: dark)"
-        #   scheme: sokyoei
-        #   toggle:
-        #     icon: material/brightness-4
-        #     name: light mode
+  name: material
+  language: zh
+  logo: images/Popstar Ahri-512x512.jpg
+  favicon: images/favicon_32x32.ico
+  features:
+    - header.autohide
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - toc.integrate
+    - content.code.copy
+  palette:
+    primary: pink
+    accent: purple
+    # - media: "(prefers-color-scheme: light)"
+    #   scheme: sokyoei
+    #   toggle:
+    #     icon: material/brightness-7
+    #     name: dark mode
+    # - media: "(prefers-color-scheme: dark)"
+    #   scheme: sokyoei
+    #   toggle:
+    #     icon: material/brightness-4
+    #     name: light mode
 
-    icon:
-        repo: fontawesome/brands/github
+  icon:
+    repo: fontawesome/brands/github
 
 plugins:
-    - search
-    #  - monorepo
+  - search
+  #  - monorepo
 
 extra_css:
-    - stylesheets/extra.css
+  - stylesheets/extra.css
 
 # extra_javascript:
 #   - javascripts/mathjax.js
@@ -49,33 +49,33 @@ extra_css:
 #   - templates/extra.html
 
 markdown_extensions:
-    - tables
-    - attr_list
-    - def_list
-    - abbr
-    - admonition
-    - md_in_html
-    - pymdownx.snippets:
-          url_download: true
-          url_timeout: 0
-    - pymdownx.details
-    - pymdownx.superfences:
-          custom_fences:
-              - name: mermaid
-                class: mermaid
-                format: !!python/name:pymdownx.superfences.fence_code_format
-    - pymdownx.highlight:
-          anchor_linenums: true
-          line_spans: __span
-          pygments_lang_class: true
-    - pymdownx.inlinehilite
-    - pymdownx.emoji:
-          emoji_index: !!python/name:material.extensions.emoji.twemoji
-          emoji_generator: !!python/name:material.extensions.emoji.to_svg
-    - pymdownx.arithmatex:
-          generic: true
-    - pymdownx.tabbed:
-          alternate_style: true
-          slugify: !!python/object/apply:pymdownx.slugs.slugify
-              kwds:
-                  case: lower
+  - tables
+  - attr_list
+  - def_list
+  - abbr
+  - admonition
+  - md_in_html
+  - pymdownx.snippets:
+      url_download: true
+      url_timeout: 0
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
