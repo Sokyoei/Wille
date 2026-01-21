@@ -5,19 +5,291 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wille</title>
+  <style>
+    /* 全局平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* 确保内容不会被固定在顶部的导航栏遮挡 */
+    body {
+      margin-top: 60px;
+    }
+
+    /* 所有模块默认隐藏 */
+    .module {
+      display: none;
+      margin: 20px;
+    }
+
+    /* 导航栏样式 */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #d836de;
+      overflow: hidden;
+      z-index: 999;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar.hidden {
+      transform: translateY(-100%);
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar li a:hover {
+      background-color: #c81d84;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>hello</h1>
-  <p id="demo">段落</p>
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <ul>
+      <li><a onclick="showModule('base')">基础标签</a></li>
+      <li><a onclick="showModule('form')">表单</a></li>
+      <li><a onclick="showModule('image')">图片</a></li>
+      <li><a onclick="showModule('media')">音视频</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <div id="base" class="module">
+      <!-- 标题 -->
+      <h1>Hello World(h1)</h1>
+      <h2>Hello World(h2)</h2>
+      <h3>Hello World(h3)</h3>
+      <h4>Hello World(h4)</h4>
+      <h5>Hello World(h5)</h5>
+      <h6>Hello World(h6)</h6>
+      <hr />
+
+      <!-- 表格 -->
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Ahri</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Sokyoei</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Nono </td>
+          <td>18</td>
+        </tr>
+      </table>
+      <hr />
+
+      <!-- 有序列表 -->
+      <ol>
+        <li>Ahri</li>
+        <li>Sokyoei</li>
+        <li>Nono</li>
+      </ol>
+      <hr />
+
+      <!-- 无序列表 -->
+      <ul>
+        <li>Ahri</li>
+        <li>Sokyoei</li>
+        <li>Nono</li>
+      </ul>
+      <hr />
+
+      <!-- 列表嵌套 -->
+      <dl>
+        <dt>HTML</dt>
+        <dd>超文本标记语言</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表</dd>
+      </dl>
+      <hr />
+
+      <p id="dear">Dear None</p>
+      <button type="button" onclick="dear_ahri()">click to say Dear Ahri</button>
+      <p>这是另一个带有<strong>粗体文本</strong>和<em>强调文本</em>的段落。</p>
+      <p>这里有一些<mark>高亮文本</mark>、<small>小号文本</small>和<s>删除线文本</s>。</p>
+      <p>上标：E = mc<sup>2</sup> 和下标：H<sub>2</sub>O</p>
+      <hr />
+
+      <!-- 链接 -->
+      <p>这是一个<a href="https://www.example.com">外部链接</a>的例子。</p>
+      <p>这是一个<a href="#section1">内部锚点链接</a>的例子。</p>
+      <hr />
+
+      <!-- div和span -->
+      <div style="background-color: lightblue; padding: 10px;">
+        这是一个div元素，用于块级内容
+        <span style="color: red;">这是一个span元素，用于内联内容</span>
+      </div>
+      <hr />
+
+      <!-- 引用元素 -->
+      <blockquote cite="https://example.com">
+        这是一个长引用的例子。
+      </blockquote>
+      <q>这是一个短引用的例子。</q>
+      <hr />
+
+      <!-- 详情和摘要 -->
+      <details>
+        <summary>点击显示/隐藏详细信息</summary>
+        <p>这里是详细信息内容。</p>
+      </details>
+      <hr />
+
+      <!-- 进度条和度量 -->
+      <progress value="70" max="100">70%</progress>
+      <meter value="0.6" min="0" max="1">60%</meter>
+      <hr />
+
+      <!-- 内联框架 -->
+      <iframe src="https://www.w3schools.com" title="W3Schools 示例" width="600" height="400"></iframe>
+      <hr />
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- 表单 -->
+    <div id="form" class="module">
+      <form>
+        <fieldset>
+          <legend>用户信息表单</legend>
+
+          <label for="name">姓名:</label>
+          <input type="text" id="name" name="name" placeholder="输入您的姓名"><br><br>
+
+          <label for="email">邮箱:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="password">密码:</label>
+          <input type="password" id="password" name="password"><br><br>
+
+          <label for="age">年龄:</label>
+          <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+          <label for="birthdate">生日:</label>
+          <input type="date" id="birthdate" name="birthdate"><br><br>
+
+          <label for="time">时间:</label>
+          <input type="time" id="time" name="time"><br><br>
+
+          <label>性别:</label>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">男</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">女</label><br><br>
+
+          <label>兴趣爱好:</label>
+          <input type="checkbox" id="reading" name="hobby" value="reading">
+          <label for="reading">阅读</label>
+          <input type="checkbox" id="music" name="hobby" value="music">
+          <label for="music">音乐</label>
+          <input type="checkbox" id="sports" name="hobby" value="sports">
+          <label for="sports">运动</label><br><br>
+
+          <label for="country">国家:</label>
+          <select id="country" name="country">
+            <option value="">请选择</option>
+            <option value="cn">中国</option>
+            <option value="us">美国</option>
+            <option value="jp">日本</option>
+          </select><br><br>
+
+          <label for="message">留言:</label><br>
+          <textarea id="message" name="message" rows="4" cols="50" placeholder="请输入您的留言"></textarea><br><br>
+
+          <input type="submit" value="提交">
+          <input type="reset" value="重置">
+        </fieldset>
+      </form>
+      <hr />
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- 图片 -->
+    <div id="image" class="module">
+      <img src="../../data/Ahri/K／DA Ahri.jpg" alt="示例图片" width="640" height="480">
+      <hr />
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- 音视频 -->
+    <div id="media" class="module">
+      <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+      </audio>
+      <video width="320" height="240" controls>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        您的浏览器不支持视频元素。
+      </video>
+      <hr />
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer>Copyright © 2026 Wille by Sokyoei</footer>
+
   <script>
-    document.write("Ahri");
+    // 处理导航栏滚动显示/隐藏功能
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.getElementById("navbar");
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        // 向上滚动 - 显示导航栏
+        navbar.classList.remove("hidden");
+      } else {
+        // 向下滚动 - 隐藏导航栏
+        navbar.classList.add("hidden");
+      }
+      prevScrollPos = currentScrollPos;
+    };
+
+    // 显示指定模块，其他模块隐藏
+    function showModule(moduleId) {
+      const all_modules = document.querySelectorAll(".module");
+      all_modules.forEach(function (module) {
+        module.style.display = "none";
+      });
+      document.getElementById(moduleId).style.display = "block";
+    }
+
+    // 默认加载 base 模块
+    window.onload = function () {
+      showModule("base");
+    };
+
+    // document.write("Ahri");
     // alert("Sokyoei");
-    function func1() {
-      document.getElementById("demo").innerHTML = "Dear Ahri";
+    function dear_ahri() {
+      document.getElementById("dear").innerHTML = "Dear Ahri";
     }
   </script>
-  <button type="button" onclick="func1()">botton</button>
 </body>
 
 </html>

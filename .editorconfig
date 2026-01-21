@@ -16,5 +16,5 @@ ij_javascript_spaces_within_imports = true
 ij_html_line_comment_at_first_column = false
 ij_html_block_comment_at_first_column = false
 
-[*.{html,css,js,ts,json,vue,jsx,tsx,yml,yaml}]
+[*.{html,css,js,ts,json,vue,jsx,tsx,yml,yaml,mjs,cjs}]
 indent_size = 2
