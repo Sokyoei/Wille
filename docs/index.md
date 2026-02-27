@@ -62,6 +62,14 @@ npm install eslint --save-dev
 npm init @eslint/config
 ```
 
+## 更新 package.json
+
+```shell
+npx ncu -u
+
+npm install
+```
+
 ## FAQ
 
 Windows 上 PowerShell 执行 ts-node 等出错
