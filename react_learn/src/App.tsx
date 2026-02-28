@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Child from "./components/Child";
@@ -9,11 +9,11 @@ import Hello from "./components/Hello";
 import About from "./pages/About";
 import Home from "./pages/Home";
 
-function App() {
+const App: React.FC = () => {
   const [childMsg, setChildMsg] = useState("");
 
   // 回调函数：接收子组件传的值
-  const getChildData = (msg: string) => {
+  const getChildData = (msg: string): void => {
     setChildMsg(`子组件传来：${msg}`);
   };
 
@@ -42,6 +42,6 @@ function App() {
       <p>{childMsg}</p>
     </div>
   );
-}
+};
 
 export default App;
