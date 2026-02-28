@@ -70,6 +70,8 @@
       <li><a onclick="showModule('form')">表单</a></li>
       <li><a onclick="showModule('image')">图片</a></li>
       <li><a onclick="showModule('media')">音视频</a></li>
+      <li><a onclick="showModule('canvas')">Canvas</a></li>
+      <li><a onclick="showModule('geo')">地理</a></li>
     </ul>
   </nav>
 
@@ -84,9 +86,8 @@
       <h5>Hello World(h5)</h5>
       <h6>Hello World(h6)</h6>
       <hr />
-
       <!-- 表格 -->
-      <table>
+      <table id="table">
         <tr>
           <th>Name</th>
           <th>Age</th>
@@ -105,7 +106,6 @@
         </tr>
       </table>
       <hr />
-
       <!-- 有序列表 -->
       <ol>
         <li>Ahri</li>
@@ -113,7 +113,6 @@
         <li>Nono</li>
       </ol>
       <hr />
-
       <!-- 无序列表 -->
       <ul>
         <li>Ahri</li>
@@ -121,7 +120,6 @@
         <li>Nono</li>
       </ul>
       <hr />
-
       <!-- 列表嵌套 -->
       <dl>
         <dt>HTML</dt>
@@ -130,50 +128,43 @@
         <dd>层叠样式表</dd>
       </dl>
       <hr />
-
+      <!-- 段落 -->
       <p id="dear">Dear None</p>
       <button type="button" onclick="dear_ahri()">click to say Dear Ahri</button>
       <p>这是另一个带有<strong>粗体文本</strong>和<em>强调文本</em>的段落。</p>
       <p>这里有一些<mark>高亮文本</mark>、<small>小号文本</small>和<s>删除线文本</s>。</p>
       <p>上标：E = mc<sup>2</sup> 和下标：H<sub>2</sub>O</p>
       <hr />
-
       <!-- 链接 -->
       <p>这是一个<a href="https://www.example.com">外部链接</a>的例子。</p>
       <p>这是一个<a href="#section1">内部锚点链接</a>的例子。</p>
       <hr />
-
-      <!-- div和span -->
+      <!-- div 和 span -->
       <div style="background-color: lightblue; padding: 10px;">
         这是一个div元素，用于块级内容
         <span style="color: red;">这是一个span元素，用于内联内容</span>
       </div>
       <hr />
-
       <!-- 引用元素 -->
       <blockquote cite="https://example.com">
         这是一个长引用的例子。
       </blockquote>
       <q>这是一个短引用的例子。</q>
       <hr />
-
       <!-- 详情和摘要 -->
       <details>
         <summary>点击显示/隐藏详细信息</summary>
         <p>这里是详细信息内容。</p>
       </details>
       <hr />
-
       <!-- 进度条和度量 -->
       <progress value="70" max="100">70%</progress>
       <meter value="0.6" min="0" max="1">60%</meter>
       <hr />
-
       <!-- 内联框架 -->
       <iframe src="https://www.w3schools.com" title="W3Schools 示例" width="600" height="400"></iframe>
       <hr />
     </div>
-
     <!----------------------------------------------------------------------------------------------------------------->
     <!-- 表单 -->
     <div id="form" class="module">
@@ -249,6 +240,17 @@
       </video>
       <hr />
     </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Canvas -->
+    <div id="canvas" class="module">
+      <canvas id="myCanvas" width="200" height="100"></canvas>
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- 地理 -->
+    <div id="geo" class="module">
+      <p onclick="getGeolocation()">当前位置：</p>
+      <iframe src="" frameborder="0"></iframe>
+    </div>
   </main>
 
   <!-- 页脚 -->
@@ -258,6 +260,9 @@
     // 处理导航栏滚动显示/隐藏功能
     let prevScrollPos = window.pageYOffset;
     const navbar = document.getElementById("navbar");
+    /**
+     * @brief 页面滚动处理函数
+     */
     window.onscroll = function () {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollPos > currentScrollPos) {
@@ -270,7 +275,11 @@
       prevScrollPos = currentScrollPos;
     };
 
-    // 显示指定模块，其他模块隐藏
+    /**
+     * 显示指定模块，其他模块隐藏
+     *
+     * @param {String} moduleId 模块ID
+     */
     function showModule(moduleId) {
       const all_modules = document.querySelectorAll(".module");
       all_modules.forEach(function (module) {
@@ -283,6 +292,18 @@
     window.onload = function () {
       showModule("base");
     };
+
+    // 获取地理位置
+    function getGeolocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        geo.innerHTML = "您的浏览器不支持获取地理位置。";
+      }
+    }
+    function showPosition(position) {
+      geo.innerHTML = "纬度：" + position.coords.latitude + "<br>经度：" + position.coords.longitude;
+    }
 
     // document.write("Ahri");
     // alert("Sokyoei");

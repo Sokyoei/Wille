@@ -20,15 +20,12 @@
   },
   "homepage": "https://github.com/Sokyoei/Wille#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-vue": "^9.20.1",
+    "@types/node": "^25.3.2",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "eslint": "^10.0.2",
     "prettier": "^3.8.1",
-    "prettier-plugin-organize-imports": "^4.3.0"
-  },
-  "dependencies": {
-    "ffi-napi": "^4.0.3",
-    "ref-napi": "^3.0.3"
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "typescript": "^5.9.3"
   }
 }
