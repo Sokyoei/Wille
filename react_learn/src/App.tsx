@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Child from "./components/Child";
 import Counter from "./components/Counter";
+import Footer from "./components/Footer";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Hello from "./components/Hello";
@@ -40,6 +41,7 @@ const App: React.FC = () => {
       <Form />
       <Child sendData={getChildData} />
       <p>{childMsg}</p>
+      <Footer />
     </div>
   );
 };
