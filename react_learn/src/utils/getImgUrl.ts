@@ -1,0 +1,47 @@
+const imageFileNames = [
+  // "暗影妖狐 阿狸 入梦之影.jpg",
+  // "殿堂传奇 阿狸.jpg",
+  // "净雪之月 阿狸 水竹.jpg",
+  // "莲华温泉 阿狸 朝花.jpg",
+  // "莲华温泉 阿狸 流火.jpg",
+  // "莲华温泉 阿狸 星回.jpg",
+  // "莲华温泉 阿狸.jpg",
+  // "联盟不朽 阿狸.jpg",
+  // "灵魂莲华 阿狸 春晓.jpg",
+  // "魔女 阿狸 饕餮.jpg",
+  // "魔女 阿狸 污蔑.jpg",
+  // "偶像歌手 阿狸 高山杜鹃.jpg",
+  // "偶像歌手 阿狸 皇室鸢尾.jpg",
+  // "偶像歌手 阿狸 极地雪莲.jpg",
+  // "山海绘卷 阿狸.jpg",
+  // "水晶玫瑰 阿狸.jpg",
+  // "暇余暖池 阿狸.jpg",
+  // "星之守护者 永绽盛芒 阿狸.jpg",
+  // "焰尾妖狐 阿狸 青春之焰.jpg",
+  // "Academy Ahri.jpg",
+  // "Ahri.jpg",
+  // "Arcade Ahri.jpg",
+  // "Arcana Ahri.jpg",
+  // "Challenger Ahri ASU.jpg",
+  // "Challenger Ahri.jpg",
+  // "Coven Ahri.jpg",
+  // "Elderwood Ahri.jpg",
+  // "Foxfire Ahri ASU.jpg",
+  // "Foxfire Ahri.jpg",
+  // "K／DA Ahri.jpg",
+  // "K／DA ALL OUT 阿狸 惊艳之姿.jpg",
+  // "K／DA ALL OUT Ahri.jpg",
+  // "KDA 阿狸 魅惑之舞.jpg",
+  "Popstar Ahri ASU.jpg",
+  "Popstar Ahri.jpg",
+  // "Prestige K／DA Ahri.jpg",
+  // "Snow Moon Ahri.jpg",
+  // "Spirit Blossom Ahri.jpg",
+  // "StarGuardian Ahri.jpg",
+];
+
+export function getAhriImageUrls(): string[] {
+  // const baseUrl = 'https://raw.githubusercontent.com/Sokyoei/data/main/Ahri/';
+  const baseUrl = "https://cdn.jsdelivr.net/gh/Sokyoei/data/Ahri/";
+  return imageFileNames.map((name) => baseUrl + name);
+}

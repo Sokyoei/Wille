@@ -8,6 +8,7 @@ const Header: React.FC = () => {
 
   const goToHome = () => navigate("/");
   const goToAbout = () => navigate("/about");
+  const goToImage = () => navigate("/image");
 
   return (
     <header style={{ padding: "1rem", background: "#f0f0f0" }}>
@@ -17,6 +18,9 @@ const Header: React.FC = () => {
         </Button>
         <Button type="primary" onClick={goToAbout} style={{ fontSize: "16px", cursor: "pointer" }}>
           关于
+        </Button>
+        <Button type="primary" onClick={goToImage} style={{ fontSize: "16px", cursor: "pointer" }}>
+          图片
         </Button>
       </nav>
     </header>
