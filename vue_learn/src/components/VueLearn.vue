@@ -61,11 +61,11 @@
   </div>
   <!-- 组件 -->
   <div>
-    <HelloWorld :msg="count"/>
+    <HelloWorld :msg="count" />
   </div>
   <!-- Emits -->
   <div>
-    <HelloWorld @response="(msg) => childMsg = msg"/>
+    <HelloWorld @response="(msg) => childMsg = msg" />
     <p>{{ childMsg }}</p>
   </div>
   <!-- 插槽 -->
@@ -89,9 +89,9 @@ export default {
       newTodo: '',
       hideCompleted: false,
       todos: [
-        {id: id++, text: 'Ahri', done: true},
-        {id: id++, text: 'Sokyoei', done: true},
-        {id: id++, text: 'Nono', done: false}
+        { id: id++, text: 'Ahri', done: true },
+        { id: id++, text: 'Sokyoei', done: true },
+        { id: id++, text: 'Nono', done: false }
       ],
       todoId: 1,
       todoData: null,
@@ -114,7 +114,7 @@ export default {
       this.awesome = !this.awesome
     },
     addTodo() {
-      this.todos.push({id: id++, text: this.newTodo, done: false})
+      this.todos.push({ id: id++, text: this.newTodo, done: false })
       this.newTodo = ''
     },
     removeTodo(todo) {
