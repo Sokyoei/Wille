@@ -1,4 +1,4 @@
-# vue_learn
+# vue_learning
 
 ## Project setup
 
@@ -31,7 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## 项目结构
 
 ```text
-vue_learn
+vue_learning
 ├──public
 ├──src
 │  ├──asserts       静态资源
