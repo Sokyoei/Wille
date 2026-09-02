@@ -11,8 +11,17 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-# settings for JetBrains IDEs
+max_line_length = 120
+
+# JetBrains IDEs
+ij_editorconfig_space_after_comma = false
+# Comments
+ij_any_line_comment_at_first_column = false
+ij_any_line_comment_add_space = true
+ij_any_block_comment_add_space = true
+# Javascript
 ij_javascript_spaces_within_imports = true
+# HTML
 ij_html_line_comment_at_first_column = false
 ij_html_block_comment_at_first_column = false
 
